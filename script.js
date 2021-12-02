@@ -34,7 +34,7 @@ function positiveArrNumber(array) {
   if (array.length === 0) return "Array empty";
 
   for (let i = 0; i <= array.length; i++) {
-    if (array[i] > 0) {
+    if (checkNumber(array[i]) && array[i] > 0) {
       exampleArr.push(array[i]);
     }
   }
@@ -42,6 +42,11 @@ function positiveArrNumber(array) {
 }
 
 console.log(positiveArrNumber(arr2));
+
+function checkNumber(args) {
+  if (typeof args === "number" && !isNaN(+args)) return true;
+  return false;
+}
 
 // function isPositive(num) {
 //   if (num >= 0) {
