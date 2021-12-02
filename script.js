@@ -21,12 +21,27 @@ function positiveNumber(array) {
 
   if (exampleArr.length) {
     return exampleArr;
-  } else {
-    return null;
   }
+  return null;
 }
 
 console.log(positiveNumber(arr));
+
+const arr2 = [1, 2, 3, 4, 5, -1, -2, -3];
+function positiveArrNumber(array) {
+  const exampleArr = [];
+
+  if (array.length === 0) return "Array empty";
+
+  for (let i = 0; i <= array.length; i++) {
+    if (array[i] > 0) {
+      exampleArr.push(array[i]);
+    }
+  }
+  return exampleArr.length === 0 ? null : exampleArr;
+}
+
+console.log(positiveArrNumber(arr2));
 
 // function isPositive(num) {
 //   if (num >= 0) {
